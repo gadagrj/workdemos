@@ -1,0 +1,124 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>@ViewBag.Title - My ASP.NET Application</title>
+
+    <link href="~/Content/bootstrap.css" rel="stylesheet" />
+    @Scripts.Render("~/bundles/modernizr")
+
+</head>
+<body>
+    <div class="navbar navbar-inverse navbar-fixed-top">
+        <div>
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+
+                @Html.ActionLink("Application name", "Index", "Home", null, new { @class = "navbar-brand" })
+            </div>
+            <div class="navbar-collapse collapse">
+                <ul class="nav navbar-nav">
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">Optimization <b class="caret"></b></a>
+                        <ul class="dropdown-menu">
+                            <li><a href="#" class="btn-link"><span class="glyphicon glyphicon-play">Optimize KPI</span></a></li>
+                            <li><a href="#">Scenario</a></li>
+                            <li><a href="#">Asembly</a></li>
+                            <li><a href="#">Tuning</a></li>
+                            <li><a href="#">Marginal KPI</a></li>
+                            <li><a href="#">Total KPI</a></li>
+                        </ul>
+                    </li>
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">Report <b class="caret"></b></a>
+                        <ul class="dropdown-menu">
+                            <li><a href="#">Executive Report</a></li>
+                            <li><a href="#">Rollup Report</a></li>
+                            <li><a href="#">Custom Report</a></li>
+                            <li><a href="#">Stor sizr report</a></li>
+                            <li><a href="#">Exectutive Report template</a></li>
+
+                        </ul>
+                    </li>
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">Data <b class="caret"></b></a>
+                        <ul class="dropdown-menu">
+                            <li><a href="#">survey list</a></li>
+                            <li><a href="#">Copy store</a></li>
+                            <li><a href="#">Replace data</a></li>
+                            <li><a href="#">Extrct data</a></li>
+                            <li><a href="#">manage product</a></li>
+
+                        </ul>
+                    </li>
+
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">Adminstration <b class="caret"></b></a>
+                        <ul class="dropdown-menu">
+                            <li><a href="#">Manage user</a></li>
+                            <li><a href="#">User Authorization</a></li>
+                            <li><a href="#">Log</a></li>
+                            <li><a href="#">Extrct data</a></li>
+                            <li><a href="#">Manage client</a></li>
+                            <li><a href="#">store Host</a></li>
+                        </ul>
+                    </li>
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">Adminstration <b class="caret"></b></a>
+                        <ul class="dropdown-menu">
+                            <li><a href="#">Manage user</a></li>
+                            <li><a href="#">User Authorization</a></li>
+                            <li><a href="#">Log</a></li>
+                            <li><a href="#">Extrct data</a></li>
+                            <li><a href="#">Manage client</a></li>
+                            <li><a href="#">store Host</a></li>
+                        </ul>
+                    </li>
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">Tools <b class="caret"></b></a>
+                        <ul class="dropdown-menu">
+                            <li><a href="#">System Options</a></li>
+                            <li><a href="#">Facing exception</a></li>
+                            <li><a href="#" class="divider"></a></li>
+                            <li role="presentation" class="dropdown-header">More</li>
+                            <li><a href="#">Select Client</a></li>
+                            <li><a href="#">Slect store</a></li>
+                            <li> <a href="#">Load Cube</a></li>
+                            <li> <a href="#">Load Cube</a></li>
+                            <li><a href="#">Load section</a></li>
+                        </ul>
+                    </li>
+                </ul>
+                <ul class="nav navbar-nav navbar-right">
+                    <li><form class="input-append" method="GET" action="/search" style="margin-top:4px;margin-bottom:5px;"><input type="text" title="Enter keyword(s) to find" id="kw" name="kw" class="span2"><button type="submit" class="btn" style="background-color:#222;color:#eee;border-color:#222;"><i class="icon-search" title="Search"></i></button></form>&nbsp;&nbsp;</li>
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">Login/SignUp <b class="caret"></b></a>
+                        <ul class="dropdown-menu">
+                            <li><a href="#">Login</a></li>
+                            <li><a href="#">signup</a></li>
+
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div class="container body-content">
+        @RenderBody()
+        <hr />
+        <footer>
+            <p>&copy; @DateTime.Now.Year - My ASP.NET Application</p>
+        </footer>
+    </div>
+
+    @Scripts.Render("~/bundles/jquery")
+    @Scripts.Render("~/bundles/bootstrap")
+    @RenderSection("scripts", required: false)
+</body>
+</html>
+
